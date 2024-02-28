@@ -1,0 +1,15 @@
+To refresh this file, delete it and run /reload command again! Last updated: Apr 1, 2022, 9:29:03 PM
+
+#underworld:tick
+- tf_portals:loop
+
+#minecraft:tick
+- terralith:tick
+- tf_portals:loop
+
+#underworld:load
+- tf_portals:load
+
+#minecraft:load
+- terralith:setup
+- tf_portals:load

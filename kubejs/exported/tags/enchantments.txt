@@ -1,0 +1,16 @@
+To refresh this file, delete it and run /reload command again! Last updated: Apr 1, 2022, 9:29:01 PM
+
+#forge:soulbound
+- ensorcellation:soulbound?
+- tombstone:soulbound?
+
+#tetra:exclusions/blunt_weapon
+- minecraft:sharpness
+
+#tetra:additions/throwable
+- minecraft:loyalty
+- minecraft:channeling
+
+#tetra:exclusions/pointy_weapon
+- minecraft:loyalty
+- minecraft:channeling

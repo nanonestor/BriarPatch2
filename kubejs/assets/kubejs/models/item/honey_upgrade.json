@@ -1,0 +1,8 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "kubejs:item/honey_upgrade",
+    "layer1": "kubejs:item/honey_upgrade_lights",
+    "layer2": "kubejs:item/upgrade_augment_anim"
+  }
+}
