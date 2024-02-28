@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_basin",
+  "cast": {
+    "tag": "bp:cookable_beetroot"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "forge:honey",
+    "amount": 250
+  },
+  "result": "kubejs:honey_glazed_beetroot",
+  "cooling_time": 113
+}

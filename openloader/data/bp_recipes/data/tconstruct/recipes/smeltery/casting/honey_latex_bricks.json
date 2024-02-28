@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_basin",
+  "cast": {
+    "tag": "bp:honey_reinforced_bricks"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "forge:latex",
+    "amount": 1000
+  },
+  "result": "kubejs:honey_latex_bricks",
+  "cooling_time": 113
+}

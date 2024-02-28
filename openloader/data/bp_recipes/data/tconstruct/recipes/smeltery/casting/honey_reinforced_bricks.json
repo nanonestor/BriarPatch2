@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_basin",
+  "cast": {
+    "tag": "bp:cracked_stone_bricks"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "forge:honey",
+    "amount": 1000
+  },
+  "result": "kubejs:honey_reinforced_bricks",
+  "cooling_time": 113
+}
