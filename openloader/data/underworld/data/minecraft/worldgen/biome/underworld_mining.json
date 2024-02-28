@@ -1,0 +1,141 @@
+{
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 7254527,
+    "fog_color": 3344392,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [],
+    [
+      "minecraft:lake_lava_underground"
+    ],
+    [
+      "minecraft:amethyst_geode"
+    ],
+    [
+      "minecraft:monster_room",
+      "minecraft:monster_room_deep"
+    ],
+    [],
+    [],
+    [],
+    [
+      "minecraft:spring_open",
+      "minecraft:patch_fire",
+      "minecraft:brown_mushroom_nether",
+      "minecraft:red_mushroom_nether",
+      "minecraft:ore_magma",
+      "minecraft:spring_closed",
+      "minecraft:ore_ancient_debris_large",
+      "minecraft:ore_debris_small",
+      "underworld:ore_ancient_debris_large",
+      "underworld:ore_andesite_lower",
+      "underworld:ore_andesite_upper",
+      "underworld:ore_bauxite",
+      "underworld:ore_blackstone",
+      "underworld:ore_certus_quartz",
+      "underworld:ore_clay",
+      "underworld:ore_coal_lower",
+      "underworld:ore_coal_upper",
+      "underworld:ore_cobalt",
+      "underworld:ore_copper",
+      "underworld:ore_copper_large",
+      "underworld:ore_debris_small",
+      "underworld:ore_diamond",
+      "underworld:ore_diamond_buried",
+      "underworld:ore_diamond_large",
+      "underworld:ore_dimensional_shard",
+      "underworld:ore_diorite_lower",
+      "underworld:ore_diorite_upper",
+      "underworld:ore_emerald",
+      "underworld:ore_gold",
+      "underworld:ore_gold_extra",
+      "underworld:ore_gold_lower",
+      "underworld:ore_granite_lower",
+      "underworld:ore_granite_upper",
+      "underworld:ore_inferium",
+      "underworld:ore_lapis",
+      "underworld:ore_lapis_buried",
+      "underworld:ore_tin",
+      "underworld:ore_lead",
+      "underworld:ore_lead2",
+      "underworld:ore_magma",
+      "underworld:ore_netherrack",
+      "underworld:ore_nickel_1",
+      "underworld:ore_nickel_2",
+      "underworld:ore_nickel2_1",
+      "underworld:ore_nickel2_2",
+      "underworld:ore_prosperity",
+      "underworld:ore_redstone",
+      "underworld:ore_osmium",
+      "underworld:ore_flourite",
+      "underworld:ore_redstone_lower",
+      "underworld:ore_salt",
+      "underworld:ore_silver",
+      "underworld:ore_silver2",
+      "underworld:ore_soul_sand",
+      "underworld:ore_soul_soil",
+      "underworld:ore_uranium",
+      "underworld:ore_zinc",
+      "underworld:ore_sulfur",
+      "underworld:ore_niter",
+      "underworld:ore_apatite",
+      "underworld:ore_cinnabar",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_blackstone",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "underworld:ore_iron_middle",
+      "underworld:ore_iron_small",
+      "underworld:ore_iron_upper"
+    ],
+    [],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal"
+    ]
+  ],
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:enderman",
+        "weight": 1,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ],
+    "creature": [
+      {
+        "type": "minecraft:strider",
+        "weight": 60,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "precipitation": "none",
+  "temperature": 2.0,
+  "downfall": 0.0,
+  "category": "underground"
+}

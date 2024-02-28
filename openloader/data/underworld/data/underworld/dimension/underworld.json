@@ -1,0 +1,61 @@
+{
+  "type": "underworld:underworld_type",
+  "forge:use_server_seed": true,
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:underworld_mining",
+      "lakes": true,
+      "features": true,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 2
+        },
+        {
+          "block": "minecraft:deepslate",
+          "height": 40
+        },
+        {
+          "block": "minecraft:stone",
+          "height": 140
+        },
+        {
+          "block": "minecraft:granite",
+          "height": 10
+        },
+        {
+          "block": "minecraft:andesite",
+          "height": 10
+        },
+        {
+          "block": "minecraft:diorite",
+          "height": 10
+        },
+        {
+          "block": "minecraft:stone",
+          "height": 130
+        },
+        {
+          "block": "minecraft:sandstone",
+          "height": 10
+        },
+        {
+          "block": "minecraft:stone",
+          "height": 10
+        },
+        {
+          "block": "minecraft:gravel",
+          "height": 20
+        },
+        {
+          "block": "minecraft:bedrock",
+          "height": 2
+        }
+      ],
+      "structures": {
+        "structures": {}
+      }
+    }
+  }
+}

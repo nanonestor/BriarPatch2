@@ -1,0 +1,27 @@
+{
+  "feature": "underworld:ore_cobalt",
+  "placement": [
+    {
+      "count": 4,
+      "type": "minecraft:count"
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "height": {
+        "min_inclusive": {
+          "above_bottom": 10
+        },
+        "max_inclusive": {
+          "above_bottom": 40
+        },
+        "type": "minecraft:biased_to_bottom"
+      },
+      "type": "minecraft:height_range"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
