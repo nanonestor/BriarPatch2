@@ -1,0 +1,26 @@
+# The Briar Patch Scripts
+
+print("--- loading dyerecipes.zs ---");
+
+#Add recipe
+
+craftingTable.addShaped("whitedyephytogro", <item:minecraft:white_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:white_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("orangephytogro", <item:minecraft:orange_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:orange_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("magentadyephytogro", <item:minecraft:magenta_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:magenta_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("lightbluedyephytogro", <item:minecraft:light_blue_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:light_blue_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("yellowdyephytogro", <item:minecraft:yellow_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:yellow_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("limedyephytogro", <item:minecraft:lime_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:lime_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("pinkdyephytogro", <item:minecraft:pink_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:pink_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("graydyephytogro", <item:minecraft:gray_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:gray_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("lightgraydyephytogro", <item:minecraft:light_gray_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:light_gray_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("cyandyephytogro", <item:minecraft:cyan_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:cyan_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("purpledyephytogro", <item:minecraft:purple_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:purple_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("bluedyephytogro", <item:minecraft:blue_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:blue_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("browndyephytogro", <item:minecraft:brown_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:brown_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("greendyephytogro", <item:minecraft:green_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:green_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("reddyephytogro", <item:minecraft:red_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:red_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+craftingTable.addShaped("blackdyephytogro", <item:minecraft:black_dye> * 16, [[<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>], [<item:minecraft:air>,<item:minecraft:black_dye>,<item:minecraft:air>], [<item:thermal:phytogro>,<item:minecraft:air>,<item:thermal:phytogro>]], null);
+
+furnace.addRecipe("grasstogreendye", <item:minecraft:green_dye>, <item:minecraft:grass>, 0, 400);
+
+print("--- dyerecipes.zs initialized ---");
