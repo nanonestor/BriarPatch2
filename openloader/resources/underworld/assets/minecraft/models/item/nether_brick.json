@@ -1,0 +1,13 @@
+{
+ "parent": "item/handheld",
+ "textures": {
+  "layer0": "item/nether_brick"
+ },
+
+ "overrides": [
+  { "predicate": {"custom_model_data": 919190}, "model": "item/portal1"}
+
+ ]
+
+ 
+}
