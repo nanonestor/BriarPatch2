@@ -13,6 +13,7 @@ console.info("KubeJS loading server_scripts");
 //  })
 
 const item_weapon_tier = ["iron", "golden", "diamond", "emerald", "netherite"];
+const bow_type = ["bow", "crossbow"];
 const colors = [
   "black",
   "blue",
@@ -31,7 +32,6 @@ const colors = [
   "white",
   "yellow",
 ];
-const bow_type = ["bow", "crossbow"];
 
 // Adds bow tags to make bows compatible with various mods
 const add_bow_tags = (event, item, type) => {
@@ -60,41 +60,6 @@ ServerEvents.tags("item", (event) => {
   });
 });
 
-const botaniaflowers = [
-  "botania:white_mystical_flower",
-  "botania:orange_mystical_flower",
-  "botania:magenta_mystical_flower",
-  "botania:light_blue_mystical_flower",
-  "botania:yellow_mystical_flower",
-  "botania:lime_mystical_flower",
-  "botania:pink_mystical_flower",
-  "botania:gray_mystical_flower",
-  "botania:light_gray_mystical_flower",
-  "botania:cyan_mystical_flower",
-  "botania:purple_mystical_flower",
-  "botania:brown_mystical_flower",
-  "botania:green_mystical_flower",
-  "botania:red_mystical_flower",
-  "botania:black_mystical_flower",
-];
-const botaniaflowersreturn = [
-  "2x botania:white_mystical_flower",
-  "2x botania:orange_mystical_flower",
-  "2x botania:magenta_mystical_flower",
-  "2x botania:light_blue_mystical_flower",
-  "2x botania:yellow_mystical_flower",
-  "2x botania:lime_mystical_flower",
-  "2x botania:pink_mystical_flower",
-  "2x botania:gray_mystical_flower",
-  "2x botania:light_gray_mystical_flower",
-  "2x botania:cyan_mystical_flower",
-  "2x botania:purple_mystical_flower",
-  "2x botania:brown_mystical_flower",
-  "2x botania:green_mystical_flower",
-  "2x botania:red_mystical_flower",
-  "2x botania:black_mystical_flower",
-];
-
 ServerEvents.recipes((event) => {
   // Glow sticks mod recipe fixes / additions
   event.remove({ mod: "glow_sticks" });
@@ -121,134 +86,27 @@ ServerEvents.recipes((event) => {
     Item.of("material_elements:test_tube_water", '{Potion:"minecraft:water"}'),
     "#material_elements:glowing_item",
   ]);
-  event.shapeless("material_elements:test_tube_color_white", [
-    "material_elements:test_tube_glow",
-    "minecraft:white_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_orange", [
-    "material_elements:test_tube_glow",
-    "minecraft:orange_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_magenta", [
-    "material_elements:test_tube_glow",
-    "minecraft:magenta_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_light_blue", [
-    "material_elements:test_tube_glow",
-    "minecraft:light_blue_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_yellow", [
-    "material_elements:test_tube_glow",
-    "minecraft:yellow_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_lime", [
-    "material_elements:test_tube_glow",
-    "minecraft:lime_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_pink", [
-    "material_elements:test_tube_glow",
-    "minecraft:pink_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_gray", [
-    "material_elements:test_tube_glow",
-    "minecraft:gray_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_light_gray", [
-    "material_elements:test_tube_glow",
-    "minecraft:light_gray_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_cyan", [
-    "material_elements:test_tube_glow",
-    "minecraft:cyan_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_purple", [
-    "material_elements:test_tube_glow",
-    "minecraft:purple_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_blue", [
-    "material_elements:test_tube_glow",
-    "minecraft:blue_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_brown", [
-    "material_elements:test_tube_glow",
-    "minecraft:brown_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_green", [
-    "material_elements:test_tube_glow",
-    "minecraft:green_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_red", [
-    "material_elements:test_tube_glow",
-    "minecraft:red_dye",
-  ]);
-  event.shapeless("material_elements:test_tube_color_black", [
-    "material_elements:test_tube_glow",
-    "minecraft:black_dye",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_white", [
-    "material_elements:test_tube_color_white",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_orange", [
-    "material_elements:test_tube_color_orange",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_magenta", [
-    "material_elements:test_tube_color_magenta",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_light_blue", [
-    "material_elements:test_tube_color_light_blue",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_yellow", [
-    "material_elements:test_tube_color_yellow",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_lime", [
-    "material_elements:test_tube_color_lime",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_pink", [
-    "material_elements:test_tube_color_pink",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_gray", [
-    "material_elements:test_tube_color_gray",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_light_gray", [
-    "material_elements:test_tube_color_light_gray",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_cyan", [
-    "material_elements:test_tube_color_cyan",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_purple", [
-    "material_elements:test_tube_color_purple",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_blue", [
-    "material_elements:test_tube_color_blue",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_brown", [
-    "material_elements:test_tube_color_brown",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_green", [
-    "material_elements:test_tube_color_green",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_red", [
-    "material_elements:test_tube_color_red",
-    "material_elements:test_tube_glow",
-  ]);
-  event.shapeless("glow_sticks:glow_stick_black", [
-    "material_elements:test_tube_color_black",
-    "material_elements:test_tube_glow",
-  ]);
+
+  // cycle through the colors and create the recipes for the test tubes, glow sticks, and botania flowers
+  colors.forEach((color) => {
+    event.shapeless(`material_elements:test_tube_color_${color}`, [
+      "material_elements:test_tube_glow",
+      `minecraft:${color}_dye`,
+    ]);
+
+    event.shapeless(`glow_sticks:glow_stick_${color}`, [
+      `material_elements:test_tube_color_${color}`,
+      "material_elements:test_tube_glow",
+    ]);
+
+    event.recipes.thermal
+      .insolator(`2x botania:${color}_mystical_flower`, [
+        Fluid.of("minecraft:water", 8000),
+        `botania:${color}_mystical_flower`,
+      ])
+      .energy(1000000);
+  });
+
   event.recipes.thermal.bottler(
     Item.of("material_elements:test_tube_water", '{Potion:"minecraft:water"}'),
     [Fluid.of("minecraft:water", 1000), "material_elements:test_tube"]
@@ -343,37 +201,4 @@ ServerEvents.recipes((event) => {
     "#forge:storage_blocks/constantan",
     "thermal:constantan_block"
   );
-
-  // Fixes mystical agriculture essence recipes that get decimated by the recipe output replacement stuff above
-  // Sets up a helper function
-  //let maessence = (output, amount, essenceType) => {
-  //	event.shaped(
-  //		Item.of(output, amount),
-  //	[
-  //	  'AAA',
-  //	  'A A',
-  //	  'AAA'
-  //	], {
-  //	  A: essenceType
-  //	})
-  //  }
-  // Uses the helper function along with a list of names to insert into the funciton
-  //  ['lead', 'tin', 'bronze', 'silver', 'steel', 'nickel', 'constantan', 'electrum', 'invar'].forEach(metal => maessence(`thermal:${metal}_ingot`, 4, `mysticalagriculture:${metal}_essence`))
-  // Uses the helper function for an item not following the above template.
-  //  maessence('mekanism:ingot_uranium', 2, 'mysticalagriculture:uranium_essence')
-
-  // works to get an array from a tag but may not be reliable
-  //const botaniaflowers = []
-  //Ingredient.of('#botania:mystical_flowers').getItemIds().forEach(item => {
-  //	botaniaflowers.push(item);
-  //});
-
-  for (let i in botaniaflowers) {
-    event.recipes.thermal
-      .insolator(botaniaflowersreturn[i], [
-        Fluid.of("minecraft:water", 8000),
-        botaniaflowers[i],
-      ])
-      .energy(1000000);
-  }
 });
