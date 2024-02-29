@@ -12,24 +12,51 @@ console.info("KubeJS loading server_scripts");
 //	event.add('forge:latex', 'kubejs:bp_latex')
 //  })
 
+const item_metal_tier = ["iron", "gold", "diamond", "emerald", "netherite"];
+const colors = [
+  "black",
+  "blue",
+  "brown",
+  "cyan",
+  "gray",
+  "green",
+  "light_blue",
+  "light_gray",
+  "lime",
+  "magenta",
+  "orange",
+  "pink",
+  "purple",
+  "red",
+  "white",
+  "yellow",
+];
+
 ServerEvents.tags("item", (event) => {
-	//event.add('forge:raw_materials/aluminum', 'immersiveengineering:raw_aluminum')
-	event.add('forge:raw_materials/lead', 'immersiveengineering:raw_lead')
-	event.add('forge:raw_materials/silver', 'immersiveengineering:raw_silver')
-	event.add('forge:raw_materials/nickel', 'immersiveengineering:raw_nickel')
-	event.add('forge:raw_materials/uranium', 'immersiveengineering:raw_uranium')
-	event.add('forge:rubber', 'thermal:rubber')
-	event.add('forge:bows', 'ironbows:iron_bow')
-	event.add('forge:bows', 'ironbows:golden_bow')
-	event.add('forge:bows', 'ironbows:diamond_bow')
-	event.add('forge:bows', 'ironbows:emerald_bow')
-	event.add('forge:bows', 'ironbows:netherite_bow')
-	event.add('minecolonies:blacksmith_product_excluded', 'ironbows:iron_bow')
-	event.add('minecolonies:blacksmith_product_excluded', 'ironbows:golden_bow')
-	event.add('minecolonies:blacksmith_product_excluded', 'ironbows:diamond_bow')
-	event.add('minecolonies:blacksmith_product_excluded', 'ironbows:emerald_bow')
-	event.add('minecolonies:blacksmith_product_excluded', 'ironbows:netherite_bow')
-  })
+  //event.add('forge:raw_materials/aluminum', 'immersiveengineering:raw_aluminum')
+  event.add("forge:raw_materials/lead", "immersiveengineering:raw_lead");
+  event.add("forge:raw_materials/silver", "immersiveengineering:raw_silver");
+  event.add("forge:raw_materials/nickel", "immersiveengineering:raw_nickel");
+  event.add("forge:raw_materials/uranium", "immersiveengineering:raw_uranium");
+  event.add("forge:rubber", "thermal:rubber");
+  // event.add('forge:bows', 'ironbows:iron_bow')
+  // event.add('forge:bows', 'ironbows:golden_bow')
+  // event.add('forge:bows', 'ironbows:diamond_bow')
+  // event.add('forge:bows', 'ironbows:emerald_bow')
+  // event.add('forge:bows', 'ironbows:netherite_bow')
+  item_metal_tier.forEach((metal) => {
+    event.add("forge:bows", `ironbows:${metal}_bow`);
+    event.add(
+      "minecolonies:blacksmith_product_excluded",
+      `ironbows:${metal}_bow`
+    );
+  });
+  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:iron_bow')
+  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:golden_bow')
+  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:diamond_bow')
+  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:emerald_bow')
+  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:netherite_bow')
+});
 
 const botaniaflowers = [
   "botania:white_mystical_flower",
@@ -67,7 +94,7 @@ const botaniaflowersreturn = [
 ];
 
 ServerEvents.recipes((event) => {
-	// Glow sticks mod recipe fixes / additions
+  // Glow sticks mod recipe fixes / additions
   event.remove({ mod: "glow_sticks" });
   event
     .shapeless(
@@ -229,10 +256,10 @@ ServerEvents.recipes((event) => {
     Item.of("material_elements:test_tube_water", '{Potion:"minecraft:water"}'),
   ]);
 
-	// Makes thermal:rubber craftable using Industrial Foregoing latex also
+  // Makes thermal:rubber craftable using Industrial Foregoing latex also
   event.shapeless("3x thermal:rubber", ["industrialforegoing:latex_bucket"]);
 
-	// Replaces the output of various materials with a desired output to unify the ores used a bit more.  Thermal mod is the preferred mod when an output item is available.
+  // Replaces the output of various materials with a desired output to unify the ores used a bit more.  Thermal mod is the preferred mod when an output item is available.
   event.replaceOutput({}, "#forge:raw_materials/tin", "thermal:raw_tin");
   event.replaceOutput({}, "#forge:raw_materials/lead", "thermal:raw_lead");
   event.replaceOutput({}, "#forge:raw_materials/silver", "thermal:raw_silver");
@@ -243,7 +270,7 @@ ServerEvents.recipes((event) => {
     "thermal:raw_uranium"
   );
   event.replaceOutput({}, "#forge:raw_materials/osmium", "thermal:raw_osmium");
-	//event.replaceOutput({}, '#forge:raw_materials/aluminum', 'immersiveengineering:raw_aluminum')
+  //event.replaceOutput({}, '#forge:raw_materials/aluminum', 'immersiveengineering:raw_aluminum')
 
   event.replaceOutput({}, "#forge:dusts/iron", "thermal:iron_dust");
   event.replaceOutput(
@@ -280,7 +307,7 @@ ServerEvents.recipes((event) => {
     "thermal:constantan_ingot"
   );
   event.replaceOutput({}, "#forge:ingots/tin", "thermal:tin_ingot");
-	
+
   event.replaceOutput(
     {},
     "#forge:storage_blocks/silver",
@@ -315,36 +342,36 @@ ServerEvents.recipes((event) => {
     "thermal:constantan_block"
   );
 
-	// Fixes mystical agriculture essence recipes that get decimated by the recipe output replacement stuff above
-	// Sets up a helper function
-	//let maessence = (output, amount, essenceType) => {
-	//	event.shaped(
-	//		Item.of(output, amount), 
-	//	[
-	//	  'AAA',
-	//	  'A A',
-	//	  'AAA'
-	//	], {
-	//	  A: essenceType
-	//	})
-	//  }
-	  // Uses the helper function along with a list of names to insert into the funciton
-	//  ['lead', 'tin', 'bronze', 'silver', 'steel', 'nickel', 'constantan', 'electrum', 'invar'].forEach(metal => maessence(`thermal:${metal}_ingot`, 4, `mysticalagriculture:${metal}_essence`))
-	  // Uses the helper function for an item not following the above template.
-	//  maessence('mekanism:ingot_uranium', 2, 'mysticalagriculture:uranium_essence')
+  // Fixes mystical agriculture essence recipes that get decimated by the recipe output replacement stuff above
+  // Sets up a helper function
+  //let maessence = (output, amount, essenceType) => {
+  //	event.shaped(
+  //		Item.of(output, amount),
+  //	[
+  //	  'AAA',
+  //	  'A A',
+  //	  'AAA'
+  //	], {
+  //	  A: essenceType
+  //	})
+  //  }
+  // Uses the helper function along with a list of names to insert into the funciton
+  //  ['lead', 'tin', 'bronze', 'silver', 'steel', 'nickel', 'constantan', 'electrum', 'invar'].forEach(metal => maessence(`thermal:${metal}_ingot`, 4, `mysticalagriculture:${metal}_essence`))
+  // Uses the helper function for an item not following the above template.
+  //  maessence('mekanism:ingot_uranium', 2, 'mysticalagriculture:uranium_essence')
 
-// works to get an array from a tag but may not be reliable
-//const botaniaflowers = []
-//Ingredient.of('#botania:mystical_flowers').getItemIds().forEach(item => {
-//	botaniaflowers.push(item);
-//});
+  // works to get an array from a tag but may not be reliable
+  //const botaniaflowers = []
+  //Ingredient.of('#botania:mystical_flowers').getItemIds().forEach(item => {
+  //	botaniaflowers.push(item);
+  //});
 
-for (let i in botaniaflowers) {
+  for (let i in botaniaflowers) {
     event.recipes.thermal
       .insolator(botaniaflowersreturn[i], [
         Fluid.of("minecraft:water", 8000),
         botaniaflowers[i],
       ])
       .energy(1000000);
-}
+  }
 });
