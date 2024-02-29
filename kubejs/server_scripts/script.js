@@ -12,7 +12,7 @@ console.info("KubeJS loading server_scripts");
 //	event.add('forge:latex', 'kubejs:bp_latex')
 //  })
 
-const item_metal_tier = ["iron", "gold", "diamond", "emerald", "netherite"];
+const item_weapon_tier = ["iron", "golden", "diamond", "emerald", "netherite"];
 const colors = [
   "black",
   "blue",
@@ -31,6 +31,16 @@ const colors = [
   "white",
   "yellow",
 ];
+const bow_type = ["bow", "crossbow"];
+
+// Adds bow tags to make bows compatible with various mods
+const add_bow_tags = (event, item, type) => {
+  event.add(`forge:${type}s`, item);
+  event.add("forge:tools", item);
+  event.add(`forge:tools/${type}s`, item);
+  event.add(`bookshelf:${type}s`, item);
+  event.add("minecolonies:blacksmith_product_excluded", item);
+};
 
 ServerEvents.tags("item", (event) => {
   //event.add('forge:raw_materials/aluminum', 'immersiveengineering:raw_aluminum')
@@ -39,12 +49,14 @@ ServerEvents.tags("item", (event) => {
   event.add("forge:raw_materials/nickel", "immersiveengineering:raw_nickel");
   event.add("forge:raw_materials/uranium", "immersiveengineering:raw_uranium");
   event.add("forge:rubber", "thermal:rubber");
-  item_metal_tier.forEach((metal) => {
-    event.add("forge:bows", `ironbows:${metal}_bow`);
-    event.add(
-      "minecolonies:blacksmith_product_excluded",
-      `ironbows:${metal}_bow`
-    );
+
+  item_weapon_tier.forEach((tier) => {
+    bow_type.forEach((type) => {
+      add_bow_tags(event, `ironbows:${tier}_${type}`, type);
+
+      if (tier !== "emerald")
+        add_bow_tags(event, `nyfsarcheryplus:${tier}_${type}`, type);
+    });
   });
 });
 
