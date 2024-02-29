@@ -39,11 +39,6 @@ ServerEvents.tags("item", (event) => {
   event.add("forge:raw_materials/nickel", "immersiveengineering:raw_nickel");
   event.add("forge:raw_materials/uranium", "immersiveengineering:raw_uranium");
   event.add("forge:rubber", "thermal:rubber");
-  // event.add('forge:bows', 'ironbows:iron_bow')
-  // event.add('forge:bows', 'ironbows:golden_bow')
-  // event.add('forge:bows', 'ironbows:diamond_bow')
-  // event.add('forge:bows', 'ironbows:emerald_bow')
-  // event.add('forge:bows', 'ironbows:netherite_bow')
   item_metal_tier.forEach((metal) => {
     event.add("forge:bows", `ironbows:${metal}_bow`);
     event.add(
@@ -51,11 +46,6 @@ ServerEvents.tags("item", (event) => {
       `ironbows:${metal}_bow`
     );
   });
-  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:iron_bow')
-  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:golden_bow')
-  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:diamond_bow')
-  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:emerald_bow')
-  // event.add('minecolonies:blacksmith_product_excluded', 'ironbows:netherite_bow')
 });
 
 const botaniaflowers = [
