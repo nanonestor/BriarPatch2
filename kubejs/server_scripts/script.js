@@ -5,14 +5,14 @@
 //settings.logSkippedRecipes = false
 //settings.logErroringRecipes = true
 
-console.info('KubeJS loading server_scripts')
+console.info("KubeJS loading server_scripts");
 
 // Listen to item tag event
 //onEvent('tags.fluids', event => {
 //	event.add('forge:latex', 'kubejs:bp_latex')
 //  })
 
-ServerEvents.tags('item', event => {
+ServerEvents.tags("item", (event) => {
 	//event.add('forge:raw_materials/aluminum', 'immersiveengineering:raw_aluminum')
 	event.add('forge:raw_materials/lead', 'immersiveengineering:raw_lead')
 	event.add('forge:raw_materials/silver', 'immersiveengineering:raw_silver')
