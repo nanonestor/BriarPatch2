@@ -1,5 +1,7 @@
 console.log("KubeJS loading dye recipes...");
 
+// COLORS declared in kubejs/server_scripts/script.js
+
 const dyeRecipe = (event, dye_item, amount) => {
   event.shaped(Item.of(dye_item, amount), ["A A", " B ", "A A"], {
     A: "thermal:phytogro",
