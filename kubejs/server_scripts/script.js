@@ -14,7 +14,7 @@ console.info("KubeJS loading server_scripts");
 
 const ITEM_WEAPON_TIER = ["iron", "golden", "diamond", "emerald", "netherite"];
 const BOW_TYPE = ["bow", "crossbow"];
-const COLORS = [
+let COLORS = [
   "black",
   "blue",
   "brown",
@@ -43,11 +43,17 @@ const add_bow_tags = (event, item, type) => {
 };
 
 ServerEvents.tags("item", (event) => {
-  //event.add('forge:raw_materials/aluminum', 'immersiveengineering:raw_aluminum')
-  event.add("forge:raw_materials/lead", "immersiveengineering:raw_lead");
-  event.add("forge:raw_materials/silver", "immersiveengineering:raw_silver");
-  event.add("forge:raw_materials/nickel", "immersiveengineering:raw_nickel");
-  event.add("forge:raw_materials/uranium", "immersiveengineering:raw_uranium");
+  ["lead", "silver", "nickel", "uranium"].forEach((metal) => {
+    event.add(
+      `forge:raw_materials/${metal}`,
+      `immersiveengineering:raw_${metal}`
+    );
+  });
+
+  ["industrialforegoing:latex", "thermal:latex"].forEach((latex) => {
+    event.add("forge:latex", latex);
+  });
+
   event.add("forge:rubber", "thermal:rubber");
 
   ITEM_WEAPON_TIER.forEach((tier) => {
@@ -104,13 +110,14 @@ ServerEvents.recipes((event) => {
         Fluid.of("minecraft:water", 8000),
         `botania:${color}_mystical_flower`,
       ])
-      .energy(1000000);
+      .energy(1e6); // short for 1_000_000 or 1 million
   });
 
   event.recipes.thermal.bottler(
     Item.of("material_elements:test_tube_water", '{Potion:"minecraft:water"}'),
     [Fluid.of("minecraft:water", 1000), "material_elements:test_tube"]
   );
+
   event.recipes.thermal.bottler("material_elements:test_tube_glow", [
     Fluid.of("thermal:glowstone", 250),
     Item.of("material_elements:test_tube_water", '{Potion:"minecraft:water"}'),
