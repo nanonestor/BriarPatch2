@@ -11,7 +11,7 @@ const MEK_PIPES = [
 JEIEvents.hideItems((event) => {
   MEK_TIERS.forEach((tier) => {
     MEK_PIPES.forEach((pipe) => {
-      event.hide(`mekanism:${tier}_${pipe}`);
+      event.hide(Item.of(`mekanism:${tier}_${pipe}`));
     });
   });
 
