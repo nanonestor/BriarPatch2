@@ -14,7 +14,7 @@ console.info("KubeJS loading server_scripts");
 
 const ITEM_WEAPON_TIER = ["iron", "golden", "diamond", "emerald", "netherite"];
 const BOW_TYPE = ["bow", "crossbow"];
-const COLORS = [
+let COLORS = [
   "black",
   "blue",
   "brown",
