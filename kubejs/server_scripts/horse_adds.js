@@ -9,13 +9,13 @@ const horse_armor_crafting_recipe = (event, item, inputs) => {
   });
 };
 
-const tiers = ["iron", "golden", "diamond"];
-let previousTier = "leather";
+const TIERS = ["iron", "golden", "diamond"];
+let previous_tier = "leather";
 
 ServerEvents.recipes((event) => {
-  tiers.forEach((tier) => {
+  TIERS.forEach((tier) => {
     const inputs = {
-      horse_armor: `minecraft:${previousTier}_horse_armor`,
+      horse_armor: `minecraft:${previous_tier}_horse_armor`,
       helmet: `minecraft:${tier}_helmet`,
       ingot: `minecraft:${tier === "golden" ? "gold" : tier}${
         tier !== "diamond" ? "_ingot" : ""
@@ -25,7 +25,7 @@ ServerEvents.recipes((event) => {
 
     horse_armor_crafting_recipe(event, `minecraft:${tier}_horse_armor`, inputs);
 
-    previousTier = tier;
+    previous_tier = tier;
   });
 
   event.shaped(Item.of("minecraft:saddle", 1), ["LLL", "S S", "I I"], {
