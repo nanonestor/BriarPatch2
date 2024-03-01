@@ -19,15 +19,21 @@ import mods.jeitweaker.Jei;
 // <recipetype:thermal:smelter>.addRecipe(String name, MCWeightedItemStack[] outputs, IIngredient[] ingredients, float experience, int energy);
 
 <recipetype:thermal:smelter>.addRecipe("make_honey_upgrade", [<item:kubejs:honey_upgrade>.withTag({AugmentData: {Type: 'Upgrade', BaseMod: 8f, DynamoEnergy: 0.9f}}) % 100], [<item:thermal:upgrade_augment_3>, <item:minecraft:honey_block> * 8, <item:minecraft:redstone_block> * 8], 0, 20000);
+
 <recipetype:thermal:smelter>.addRecipe("make_rf_xfer_big", [<item:kubejs:rf_coil_xfer_big>.withTag({AugmentData: {Type: 'RF', RFMax: 6f, RFXfer: 8f}}) % 100], [<item:thermal:rf_coil_augment>, <item:minecraft:honeycomb> * 8, <item:minecraft:redstone_block> * 8], 0, 20000);
+
 <recipetype:thermal:press>.addRecipe("make_rf_coil_xfer_unstable", [<item:kubejs:rf_coil_xfer_unstable>.withTag({AugmentData: {Type: 'RF', RFMax: 2f, RFXfer: 12f, MachineEnergy: 1.5f}}) % 100], <fluid:minecraft:empty>, [<item:kubejs:rf_coil_xfer_big> * 9, <item:thermal:press_packing_3x3_die>], 20000);
+
 <recipetype:thermal:smelter>.addRecipe("make_machine_speed_unstable", [<item:kubejs:machine_speed_unstable>.withTag({AugmentData: {Type: 'Machine', MachinePower: 2f, MachineEnergy: 2f, MachineSpeed: 6f}}) % 100], [<item:thermal:machine_speed_augment>, <item:minecraft:copper_ingot> * 8, <item:thermal:basalz_powder> * 2], 0, 20000);
 
 <recipetype:thermal:chiller>.addRecipe("make_machine_efficiency_eco", <item:kubejs:machine_efficiency_eco>.withTag({AugmentData: {Type: 'Machine', MachineEnergy: 0.25f, MachineSpeed: -0.5f}}), <item:thermal:machine_efficiency_augment>, <fluid:cofh_core:honey> *1000, 10000);
+
 <recipetype:thermal:chiller>.addRecipe("make_machine_efficiency_eco_2", <item:kubejs:machine_efficiency_eco>.withTag({AugmentData: {Type: 'Machine', MachineEnergy: 0.25f, MachineSpeed: -0.5f}}), <item:thermal:machine_efficiency_augment>, <fluid:productivebees:honey> *1000, 10000);
 
 <recipetype:thermal:smelter>.addRecipe("make_machine_sieve_picky", [<item:kubejs:machine_sieve_picky>.withTag({AugmentData: {Type: 'Machine', MachineEnergy: 3f, MachineSec: 0.4f}}) % 100], [<item:thermal:machine_output_augment>, <item:minecraft:redstone_block> * 8, <item:thermal:basalz_powder> * 8], 0, 20000);
+
 <recipetype:thermal:smelter>.addRecipe("make_machine_catalyst_eco", [<item:kubejs:machine_catalyst_eco>.withTag({AugmentData: {Type: 'Machine', MachineCat: 0.4f, MachineEnergy: 1.5f}}) % 100], [<item:thermal:machine_catalyst_augment>, <item:minecraft:honeycomb> * 8, <item:minecraft:grass> * 8], 0, 20000);
+
 <recipetype:thermal:smelter>.addRecipe("make_dynamo_output_unstable", [<item:kubejs:dynamo_output_unstable>.withTag({AugmentData: {Type: 'Dynamo', DynamoPower: 2.5f, DynamoEnergy: 0.75f}}) % 100], [<item:thermal:dynamo_output_augment>, <item:minecraft:honeycomb> * 16, <item:thermal:basalz_powder> * 16], 0, 20000);
 
 
