@@ -1,7 +1,7 @@
 console.log("KubeJS: Removing Mekanism recipes on server...");
 
-const mek_tiers = ["basic", "advanced", "elite", "ultimate"];
-const mek_pipes = [
+const MEK_TIERS = ["basic", "advanced", "elite", "ultimate"];
+const MEK_PIPES = [
   "pressurized_tube",
   "mechanical_pipe",
   "logistical_transporter",
@@ -9,8 +9,8 @@ const mek_pipes = [
 ];
 
 ServerEvents.recipes((event) => {
-  mek_tiers.forEach((tier) => {
-    mek_pipes.forEach((pipe) => {
+  MEK_TIERS.forEach((tier) => {
+    MEK_PIPES.forEach((pipe) => {
       event.remove(event, `mekanism:transmitter/${pipe}/${tier}`);
     });
   });

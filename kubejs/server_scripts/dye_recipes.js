@@ -7,29 +7,10 @@ const dyeRecipe = (event, dye_item, amount) => {
   });
 };
 
-const dyes = [
-  "blue",
-  "brown",
-  "green",
-  "red",
-  "black",
-  "white",
-  "yellow",
-  "purple",
-  "cyan",
-  "light_gray",
-  "gray",
-  "pink",
-  "lime",
-  "light_blue",
-  "magenta",
-  "orange",
-];
-
 // Add recipes here
 ServerEvents.recipes((event) => {
-  dyes.forEach((dye) => {
-    dyeRecipe(event, `minecraft:${dye}_dye`, 16);
+  COLORS.forEach((color) => {
+    dyeRecipe(event, `minecraft:${color}_dye`, 16);
   });
 
   event.smelting("minecraft:green_dye", "minecraft:grass", 1, 400);

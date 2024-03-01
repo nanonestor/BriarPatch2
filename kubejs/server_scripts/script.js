@@ -12,9 +12,9 @@ console.info("KubeJS loading server_scripts");
 //	event.add('forge:latex', 'kubejs:bp_latex')
 //  })
 
-const item_weapon_tier = ["iron", "golden", "diamond", "emerald", "netherite"];
-const bow_type = ["bow", "crossbow"];
-const colors = [
+const ITEM_WEAPON_TIER = ["iron", "golden", "diamond", "emerald", "netherite"];
+const BOW_TYPE = ["bow", "crossbow"];
+const COLORS = [
   "black",
   "blue",
   "brown",
@@ -50,8 +50,8 @@ ServerEvents.tags("item", (event) => {
   event.add("forge:raw_materials/uranium", "immersiveengineering:raw_uranium");
   event.add("forge:rubber", "thermal:rubber");
 
-  item_weapon_tier.forEach((tier) => {
-    bow_type.forEach((type) => {
+  ITEM_WEAPON_TIER.forEach((tier) => {
+    BOW_TYPE.forEach((type) => {
       add_bow_tags(event, `ironbows:${tier}_${type}`, type);
 
       if (tier !== "emerald")
@@ -88,7 +88,7 @@ ServerEvents.recipes((event) => {
   ]);
 
   // cycle through the colors and create the recipes for the test tubes, glow sticks, and botania flowers
-  colors.forEach((color) => {
+  COLORS.forEach((color) => {
     event.shapeless(`material_elements:test_tube_color_${color}`, [
       "material_elements:test_tube_glow",
       `minecraft:${color}_dye`,
