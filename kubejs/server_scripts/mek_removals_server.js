@@ -11,7 +11,7 @@ const MEK_PIPES = [
 ServerEvents.recipes((event) => {
   MEK_TIERS.forEach((tier) => {
     MEK_PIPES.forEach((pipe) => {
-      event.remove(event, `mekanism:transmitter/${pipe}/${tier}`);
+      event.remove({ id: `mekanism:transmitter/${pipe}/${tier}` });
     });
   });
 
