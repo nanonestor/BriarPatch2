@@ -1,4 +1,4 @@
-console.log("custom_items.js loading...");
+console.log("honey_glazed_foods.js loading...");
 
 const glazed_recipes = (event, ingredient) => {
   event.recipes.thermal
@@ -25,4 +25,4 @@ ServerEvents.recipes((event) => {
   glazed_recipes(event, "beetroot");
 });
 
-console.log("custom_items.js loaded");
+console.log("honey_glazed_foods.js loaded");

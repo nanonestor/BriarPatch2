@@ -1,6 +1,6 @@
 // priority: 0
 
-console.info("KubeJS loading client_scripts");
+console.info("KubeJS loading tooltips");
 
 //onEvent('jei.remove.categories', event => {
 //	event.remove(['create:automatic_shaped', 'create:automatic_shapeless', 'create:automatic_packing'])
@@ -221,6 +221,8 @@ ItemEvents.tooltip((tooltip) => {
       }
     }
   );
+
+  console.log("KubeJS tooltips loaded");
 
   //     EXAMPLE TOOLTIP WITH VARIOUS COLORS AND SHIFT TEXT
   //	tooltip.addAdvanced('kubejs:honey_upgrade', (item, advanced, text) => {
