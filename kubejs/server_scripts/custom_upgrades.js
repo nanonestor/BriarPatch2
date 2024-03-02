@@ -37,61 +37,6 @@ ServerEvents.recipes((event) => {
     .id("kubejs:thermal.smelter.rf_coil_xfer_big");
 
   event.recipes.thermal
-    .press(
-      Item.of(
-        "kubejs:rf_coil_xfer_unstable",
-        "{AugmentData:{Type: RF, RFMax:2f, RFXfer:12f, MachineEnergy:1.5f}}"
-      ),
-      ["9x kubejs:rf_coil_xfer_big", "thermal:press_packing_3x3_die"],
-      0,
-      20000
-    )
-    .id("kubejs:thermal.press.rf_coil_xfer_unstable");
-
-  event.recipes.thermal
-    .smelter(
-      Item.of(
-        "kubejs:machine_speed_unstable",
-        "{AugmentData:{Type: Machine, MachinePower:2f, MachineEnergy:2f, MachineSpeed:6f}}"
-      ),
-      [
-        "thermal:machine_speed_augment",
-        "8x minecraft:copper_ingot",
-        "2x thermal:basalz_powder",
-      ],
-      0,
-      20000
-    )
-    .id("kubejs:thermal.smelter.machine_speed_unstable");
-
-  event.recipes.thermal
-    .chiller(
-      Item.of(
-        "kubejs:machine_efficiency_eco",
-        "{AugmentData:{Type: Machine, MachineEnergy:0.25f, MachineSpeed:-0.5f}}"
-      ),
-      ["thermal:machine_efficiency_augment", Fluid.of("cofh_core:honey", 1000)],
-      0,
-      10000
-    )
-    .id("kubejs:thermal.smelter.machine_efficiency_eco");
-
-  event.recipes.thermal
-    .chiller(
-      Item.of(
-        "kubejs:machine_efficiency_eco_2",
-        "{AugmentData:{Type: Machine, MachineEnergy:0.25f, MachineSpeed:-0.5f}}"
-      ),
-      [
-        "thermal:machine_efficiency_augment",
-        Fluid.of("productivebees:honey", 1000),
-      ],
-      0,
-      10000
-    )
-    .id("kubejs:thermal.smelter.machine_efficiency_eco_2");
-
-  event.recipes.thermal
     .smelter(
       Item.of(
         "kubejs:machine_sieve_picky",
@@ -138,6 +83,63 @@ ServerEvents.recipes((event) => {
       20000
     )
     .id("kubejs:thermal.smelter.dynamo_output_unstable");
+
+  event.recipes.thermal
+    .smelter(
+      Item.of(
+        "kubejs:machine_speed_unstable",
+        "{AugmentData:{Type: Machine, MachinePower:2f, MachineEnergy:2f, MachineSpeed:6f}}"
+      ),
+      [
+        "thermal:machine_speed_augment",
+        "8x minecraft:copper_ingot",
+        "2x thermal:basalz_powder",
+      ],
+      0,
+      20000
+    )
+    .id("kubejs:thermal.smelter.machine_speed_unstable");
+
+  // chiller recipes
+  event.recipes.thermal
+    .chiller(
+      Item.of(
+        "kubejs:machine_efficiency_eco",
+        "{AugmentData:{Type: Machine, MachineEnergy:0.25f, MachineSpeed:-0.5f}}"
+      ),
+      ["thermal:machine_efficiency_augment", Fluid.of("cofh_core:honey", 1000)],
+      0,
+      10000
+    )
+    .id("kubejs:thermal.smelter.machine_efficiency_eco");
+
+  event.recipes.thermal
+    .chiller(
+      Item.of(
+        "kubejs:machine_efficiency_eco_2",
+        "{AugmentData:{Type: Machine, MachineEnergy:0.25f, MachineSpeed:-0.5f}}"
+      ),
+      [
+        "thermal:machine_efficiency_augment",
+        Fluid.of("productivebees:honey", 1000),
+      ],
+      0,
+      10000
+    )
+    .id("kubejs:thermal.smelter.machine_efficiency_eco_2");
+
+  // press recipes
+  event.recipes.thermal
+    .press(
+      Item.of(
+        "kubejs:rf_coil_xfer_unstable",
+        "{AugmentData:{Type: RF, RFMax:2f, RFXfer:12f, MachineEnergy:1.5f}}"
+      ),
+      ["9x kubejs:rf_coil_xfer_big", "thermal:press_packing_3x3_die"],
+      0,
+      20000
+    )
+    .id("kubejs:thermal.press.rf_coil_xfer_unstable");
 });
 
 console.log("KubeJS: Added recipes for custom thermal augments.");
