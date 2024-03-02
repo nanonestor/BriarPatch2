@@ -101,6 +101,7 @@ ServerEvents.recipes((event) => {
     .id("kubejs:thermal.smelter.machine_speed_unstable");
 
   // chiller recipes
+
   event.recipes.thermal
     .chiller(
       Item.of(
@@ -116,7 +117,7 @@ ServerEvents.recipes((event) => {
   event.recipes.thermal
     .chiller(
       Item.of(
-        "kubejs:machine_efficiency_eco_2",
+        "kubejs:machine_efficiency_eco",
         "{AugmentData:{Type: Machine, MachineEnergy:0.25f, MachineSpeed:-0.5f}}"
       ),
       [
