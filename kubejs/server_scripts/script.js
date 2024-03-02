@@ -1,12 +1,5 @@
 // priority: 0
 
-//settings.logAddedRecipes = true
-//settings.logRemovedRecipes = true
-//settings.logSkippedRecipes = false
-//settings.logErroringRecipes = true
-
-console.info("KubeJS loading server_scripts");
-
 // Listen to item tag event
 //onEvent('tags.fluids', event => {
 //	event.add('forge:latex', 'kubejs:bp_latex')

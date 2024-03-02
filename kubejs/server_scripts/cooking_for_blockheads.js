@@ -1,5 +1,3 @@
-console.log("KubeJS loading cooking_for_blockheads.js...");
-
 ServerEvents.recipes((event) => {
   global.COLORS.forEach((color) => {
     event.remove({ id: `cookingforblockheads:dye_${color}_oven` });
@@ -13,5 +11,3 @@ ServerEvents.recipes((event) => {
       .id(`kubejs:cookingforblockheads_${colorTag}oven`);
   });
 });
-
-console.log("KubeJS loaded cooking_for_blockheads.js.");

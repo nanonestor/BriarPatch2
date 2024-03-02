@@ -1,5 +1,3 @@
-console.log("KubeJS loading horse additions...");
-
 const horse_armor_crafting_recipe = (event, item, inputs) => {
   event.shaped(Item.of(item, 1), ["  H", "IAI", "L L"], {
     A: inputs.horse_armor,
@@ -34,5 +32,3 @@ ServerEvents.recipes((event) => {
     S: "minecraft:string",
   });
 });
-
-console.log("KubeJS loaded horse additions.");

@@ -1,5 +1,3 @@
-console.log("honey_glazed_foods.js loading...");
-
 const glazed_recipes = (event, ingredient) => {
   event.recipes.thermal
     .smelter(
@@ -24,5 +22,3 @@ ServerEvents.recipes((event) => {
   glazed_recipes(event, "carrot");
   glazed_recipes(event, "beetroot");
 });
-
-console.log("honey_glazed_foods.js loaded");
