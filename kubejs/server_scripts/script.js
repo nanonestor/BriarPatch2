@@ -43,7 +43,11 @@ const add_bow_tags = (event, item, type) => {
 };
 
 ServerEvents.tags("item", (event) => {
-  ["lead", "silver", "nickel", "uranium"].forEach((metal) => {
+  // unify the honeys in the game
+  // ["create:honey", "productivebees:honey", "cofh:honey"]
+  //   .forEach((honey) => {})
+
+  [("lead", "silver", "nickel", "uranium")].forEach((metal) => {
     event.add(
       `forge:raw_materials/${metal}`,
       `immersiveengineering:raw_${metal}`
