@@ -14,24 +14,6 @@ console.info("KubeJS loading server_scripts");
 
 const ITEM_WEAPON_TIER = ["iron", "golden", "diamond", "emerald", "netherite"];
 const BOW_TYPE = ["bow", "crossbow"];
-let COLORS = [
-  "black",
-  "blue",
-  "brown",
-  "cyan",
-  "gray",
-  "green",
-  "light_blue",
-  "light_gray",
-  "lime",
-  "magenta",
-  "orange",
-  "pink",
-  "purple",
-  "red",
-  "white",
-  "yellow",
-];
 
 // Adds bow tags to make bows compatible with various mods
 const add_bow_tags = (event, item, type) => {
@@ -43,11 +25,7 @@ const add_bow_tags = (event, item, type) => {
 };
 
 ServerEvents.tags("item", (event) => {
-  // unify the honeys in the game
-  // ["create:honey", "productivebees:honey", "cofh:honey"]
-  //   .forEach((honey) => {})
-
-  [("lead", "silver", "nickel", "uranium")].forEach((metal) => {
+  ["lead", "silver", "nickel", "uranium"].forEach((metal) => {
     event.add(
       `forge:raw_materials/${metal}`,
       `immersiveengineering:raw_${metal}`
@@ -98,7 +76,7 @@ ServerEvents.recipes((event) => {
   ]);
 
   // cycle through the colors and create the recipes for the test tubes, glow sticks, and botania flowers
-  COLORS.forEach((color) => {
+  global.COLORS.forEach((color) => {
     event.shapeless(`material_elements:test_tube_color_${color}`, [
       "material_elements:test_tube_glow",
       `minecraft:${color}_dye`,
