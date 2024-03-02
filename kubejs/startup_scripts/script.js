@@ -1,7 +1,4 @@
 // priority: 0
-
-console.info("KubeJS loading startup_scripts");
-
 StartupEvents.registry("block", (event) => {
   event
     .create("honey_reinforced_bricks")

@@ -1,5 +1,3 @@
-console.log("KubeJS: Adding a stupid stick recipes...");
-
 ServerEvents.recipes((event) => {
   event.remove({ id: "structurize:sceptergold" });
   event
@@ -10,5 +8,3 @@ ServerEvents.recipes((event) => {
     .id("structurize:sceptergold");
   event.shapeless("minecraft:stick", ["#material_elements:wooden_sticks"]);
 });
-
-console.log("KubeJS: Added a stupid stick recipes.");
