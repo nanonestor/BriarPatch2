@@ -3,15 +3,19 @@ StartupEvents.registry("block", (event) => {
   event
     .create("honey_reinforced_bricks")
     .soundType('stone')
+    .mapColor('gold')
     .hardness(20.0)
-    .displayName("Honey Reinforced Bricks");
+    .displayName("Honey Reinforced Bricks")
+    .tagBlock("minecraft:mineable/pickaxe");
 
   event
     .create("honey_latex_bricks")
     .soundType('stone')
+    .mapColor('gold')
     .hardness(50.0)
     .displayName("Honey Latex Bricks")
-    .resistance(6000.0);
+    .resistance(6000.0)
+    .tagBlock("minecraft:mineable/pickaxe");
 });
 
 
