@@ -19,10 +19,7 @@ const add_bow_tags = (event, item, type) => {
 
 ServerEvents.tags("item", (event) => {
   ["lead", "silver", "nickel", "uranium"].forEach((metal) => {
-    event.add(
-      `forge:raw_materials/${metal}`,
-      `immersiveengineering:raw_${metal}`
-    );
+    event.add(`forge:raw_materials/${metal}`,`immersiveengineering:raw_${metal}`);
   });
 
   ["industrialforegoing:latex", "thermal:latex"].forEach((latex) => {
@@ -106,20 +103,12 @@ ServerEvents.recipes((event) => {
   event.replaceOutput({}, "#forge:raw_materials/lead", "thermal:raw_lead");
   event.replaceOutput({}, "#forge:raw_materials/silver", "thermal:raw_silver");
   event.replaceOutput({}, "#forge:raw_materials/nickel", "thermal:raw_nickel");
-  event.replaceOutput(
-    {},
-    "#forge:raw_materials/uranium",
-    "thermal:raw_uranium"
-  );
+  event.replaceOutput({},"#forge:raw_materials/uranium","thermal:raw_uranium");
   event.replaceOutput({}, "#forge:raw_materials/osmium", "thermal:raw_osmium");
   //event.replaceOutput({}, '#forge:raw_materials/aluminum', 'immersiveengineering:raw_aluminum')
 
   event.replaceOutput({}, "#forge:dusts/iron", "thermal:iron_dust");
-  event.replaceOutput(
-    {},
-    "#forge:dusts/uranium",
-    "biggerreactors:uranium_dust"
-  );
+  event.replaceOutput({}, "#forge:dusts/uranium","biggerreactors:uranium_dust");
   event.replaceOutput({}, "#forge:dusts/copper", "thermal:copper_dust");
   event.replaceOutput({}, "#forge:dusts/steel", "mekanism:dust_steel");
   event.replaceOutput({}, "#forge:dusts/gold", "thermal:gold_dust");
@@ -143,44 +132,17 @@ ServerEvents.recipes((event) => {
   event.replaceOutput({}, "#forge:ingots/nickel", "thermal:nickel_ingot");
   event.replaceOutput({}, "#forge:ingots/bronze", "thermal:bronze_ingot");
   event.replaceOutput({}, "#forge:ingots/electrum", "thermal:electrum_ingot");
-  event.replaceOutput(
-    {},
-    "#forge:ingots/constantan",
-    "thermal:constantan_ingot"
-  );
+  event.replaceOutput({}, "#forge:ingots/constantan","thermal:constantan_ingot");
   event.replaceOutput({}, "#forge:ingots/tin", "thermal:tin_ingot");
 
-  event.replaceOutput(
-    {},
-    "#forge:storage_blocks/silver",
-    "thermal:silver_block"
-  );
+  event.replaceOutput({}, "#forge:storage_blocks/silver","thermal:silver_block");
   event.replaceOutput({}, "#forge:storage_blocks/lead", "thermal:lead_block");
-  event.replaceOutput(
-    {},
-    "#forge:storage_blocks/uranium",
-    "mekanism:block_uranium"
-  );
+  event.replaceOutput({}, "#forge:storage_blocks/uranium","mekanism:block_uranium");
   event.replaceOutput({}, "#forge:storage_blocks/steel", "thermal:steel_block");
-  event.replaceOutput(
-    {},
-    "#forge:storage_blocks/nickel",
-    "thermal:nickel_block"
-  );
+  event.replaceOutput({}, "#forge:storage_blocks/nickel","thermal:nickel_block");
   event.replaceOutput({}, "#forge:storage_blocks/tin", "thermal:tin_block");
-  event.replaceOutput(
-    {},
-    "#forge:storage_blocks/bronze",
-    "thermal:bronze_block"
-  );
-  event.replaceOutput(
-    {},
-    "#forge:storage_blocks/electrum",
-    "thermal:electrum_block"
-  );
-  event.replaceOutput(
-    {},
-    "#forge:storage_blocks/constantan",
-    "thermal:constantan_block"
-  );
+  event.replaceOutput({}, "#forge:storage_blocks/bronze","thermal:bronze_block");
+  event.replaceOutput({}, "#forge:storage_blocks/electrum","thermal:electrum_block");
+  event.replaceOutput({}, "#forge:storage_blocks/constantan","thermal:constantan_block");
+
 });
