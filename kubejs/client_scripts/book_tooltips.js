@@ -1,23 +1,23 @@
 
 
 const bp_books = [
-  {item: 'alexsmobs:animal_dictionary' },
-  {item: 'ae2:guide' },
-  {item: 'immersiveengineering:manual' },
-  {item: 'rftoolsbase:manual' },
-  {item: 'croptopia:guide' },
-  {item: 'botania:lexicon' },
-  {item: 'cookingforblockheads:recipe_book' },
-  {item: 'cookingforblockheads:crafting_book' },
-  {item:'patchouli:guide_book' },
-  {item:'tetra:holo', nbt: {"holo/core":"holo/core","holo/core_material":"frame/dim","holo/frame":"holo/frame","holo/frame_material":"core/ancient","holo/repo":"holo/repo","holo/repo_material":"repo/default","holo/scanner":"holo/scanner","holo/scanner_material":"scanner/default" }}
+  { item: 'alexsmobs:animal_dictionary' },
+  { item: 'ae2:guide' },
+  { item: 'immersiveengineering:manual' },
+  { item: 'rftoolsbase:manual' },
+  { item: 'croptopia:guide' },
+  { item: 'botania:lexicon' },
+  { item: 'cookingforblockheads:recipe_book' },
+  { item: 'cookingforblockheads:crafting_book' },
+  { item: 'patchouli:guide_book' },
+  { item: 'tetra:holo', nbt: { "holo/core":"holo/core", "holo/core_material":"frame/dim", "holo/frame":"holo/frame", "holo/frame_material":"core/ancient", "holo/repo":"holo/repo", "holo/repo_material":"repo/default", "holo/scanner":"holo/scanner", "holo/scanner_material":"scanner/default" }}
 ];
 
 
 ItemEvents.tooltip((tooltip) => {
   bp_books.forEach((book) => {
     tooltip.addAdvanced(Item.of(book), (item, advanced, text) => {
-      text.add(1, Text.gold("Guide / Manual / Book / Tome").bold(false));
+      text.add(1, Text.gold("Guide / Manual / Book / Tome"));
     });
   });
 

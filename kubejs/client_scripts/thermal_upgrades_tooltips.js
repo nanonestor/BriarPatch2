@@ -56,14 +56,14 @@ ItemEvents.tooltip((tooltip) => {
   // Adds a standardized tooltip to across all augments
   thermal_augments.concat(kubejs_augments).forEach((augment) => {
     tooltip.addAdvanced(augment, (item, advanced, text) => {
-      text.add(1, Text.yellow("Thermal Augment / Upgrade").bold(false));
+      text.add(1, Text.yellow("Thermal Augment / Upgrade"));
     });
   });
 
   // Add a shift indicator to all of the new augments
   kubejs_augments.forEach((augment) => {
     tooltip.addAdvanced(augment, (item, advanced, text) => {
-      text.add(2, Text.yellow("(Hold Shift)").bold(false));
+      text.add(2, Text.yellow("(Hold Shift)"));
     });
   });
 
@@ -232,3 +232,5 @@ ItemEvents.tooltip((tooltip) => {
   //	}		text.add(4, [Text.of('Shift + Right Click').color('gold'), Text.of(' to see the range.').color(0x55FF55)]
   //		}
 });
+
+JEIEvents.subtypes((s) => {});

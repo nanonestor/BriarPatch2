@@ -2,19 +2,18 @@
 StartupEvents.registry("block", (event) => {
   event
     .create("honey_reinforced_bricks")
-    .material("stone")
+    .soundType('stone')
     .hardness(20.0)
     .displayName("Honey Reinforced Bricks");
-});
 
-StartupEvents.registry("block", (event) => {
   event
     .create("honey_latex_bricks")
-    .material("stone")
+    .soundType('stone')
     .hardness(50.0)
     .displayName("Honey Latex Bricks")
     .resistance(6000.0);
 });
+
 
 StartupEvents.registry("fluid", (event) => {
   event
