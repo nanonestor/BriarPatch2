@@ -17,15 +17,15 @@ const add_bow_tags = (event, item, type) => {
   event.add("minecolonies:blacksmith_product_excluded", item);
 };
 
+// ADDS ITEM TAGS
 ServerEvents.tags("item", (event) => {
+
+  // Adds immersiveengineering raw metals to the actual raw materials forge tag
   ["lead", "silver", "nickel", "uranium"].forEach((metal) => {
     event.add(`forge:raw_materials/${metal}`,`immersiveengineering:raw_${metal}`);
   });
 
-  ["industrialforegoing:latex", "thermal:latex"].forEach((latex) => {
-    event.add("forge:latex", latex);
-  });
-
+  // Adds rubbers to the forge rubber tag
   event.add("forge:rubber", "thermal:rubber");
 
   ITEM_WEAPON_TIER.forEach((tier) => {
@@ -36,7 +36,25 @@ ServerEvents.tags("item", (event) => {
         add_bow_tags(event, `nyfsarcheryplus:${tier}_${type}`, type);
     });
   });
+
 });
+
+// ADDS FLUID TAGS
+ServerEvents.tags('fluid', (event) => {
+
+  // Adds honeys to a forge honey tag
+  ["productivebees:honey", "create:honey", "cofh_core:honey", "the_bumblezone:honey_fluid_still" ].forEach((honeyz) => {
+    event.add('forge:honey', honeyz);
+  });
+
+  // Adds latexes to the forge latex tag
+  ["industrialforegoing:latex", "thermal:latex"].forEach((latex) => {
+    event.add('forge:latex', latex);
+  });
+
+});
+
+
 
 ServerEvents.recipes((event) => {
   // Glow sticks mod recipe fixes / additions
