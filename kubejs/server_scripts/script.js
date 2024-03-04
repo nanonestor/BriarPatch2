@@ -14,7 +14,7 @@ const add_bow_tags = (event, item, type) => {
   event.add("forge:tools", item);
   event.add(`forge:tools/${type}s`, item);
   event.add(`bookshelf:${type}s`, item);
-  event.add("minecolonies:blacksmith_product_excluded", item);
+  event.add("minecolonies:blacksmith_product", item);
 };
 
 // ADDS ITEM TAGS

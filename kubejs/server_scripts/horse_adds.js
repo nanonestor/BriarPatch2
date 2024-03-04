@@ -32,3 +32,9 @@ ServerEvents.recipes((event) => {
     S: "minecraft:string",
   });
 });
+
+ServerEvents.tags("item", (event) => {
+  TIERS.forEach((tier) => {
+    event.add("minecolonies:blacksmith_product", `minecraft:${tier}_horse_armor`);
+  })
+})
